@@ -14,6 +14,10 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.css$/, // This rule handles the CSS files
+        use: ['style-loader', 'css-loader', 'postcss-loader'], // Process CSS with Tailwind and PostCSS
+      },
     ],
   },
   plugins: [
